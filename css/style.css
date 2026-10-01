@@ -1,0 +1,671 @@
+/* Grundinställningar */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F4EFE6;
+    color: #182C27;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Headers */
+
+header {
+    height: 90px;
+    background-color: #182C27;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: #F4EFE6;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+nav a:hover {
+    color: #C8A96B;
+}
+
+
+/* Logo */
+
+.logo {
+    color: #F4EFE6;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo:hover {
+    color: #C8A96B;
+}
+
+
+/* Hero Section */
+
+.hero {
+    height: 650px;
+    background-image:
+        linear-gradient(rgba(24, 44, 39, 0.4), rgba(24, 44, 39, 0.4)),
+        url("../bilder/kyoto-hero.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Hamburger Menu */
+
+.menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #F4EFE6;
+}
+
+.hamburger {
+    position: relative;
+    margin: 0 auto;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    top: 7px;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    color: #F4EFE6;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #C8A96B;
+    color: #182C27;
+    padding: 14px 32px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.button:hover {
+    background-color: #F4EFE6;
+}
+
+
+/* Intro */
+
+.intro {
+    min-height: 300px;
+    background-color: #F4EFE6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 80px;
+}
+
+.intro h2 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    max-width: 700px;
+    font-size: 17px;
+}
+
+
+/* Rooms */
+
+.rooms {
+    background-color: #FFFFFF;
+    padding: 80px;
+}
+
+.rooms h2 {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.room-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.room-card {
+    width: 380px;
+    background-color: #F4EFE6;
+    padding-bottom: 30px;
+}
+
+.room-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.room-card h3 {
+    font-size: 22px;
+    margin: 25px 25px 10px;
+}
+
+.room-card p {
+    font-size: 15px;
+    margin: 0 25px 20px;
+}
+
+.room-link {
+    color: #182C27;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 25px;
+}
+
+.room-link:hover {
+    color: #C8A96B;
+}
+
+
+/* Footer */
+
+footer {
+    min-height: 110px;
+    background-color: #182C27;
+    color: #F4EFE6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 80px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+footer p:first-child {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+footer a {
+    color: #F4EFE6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #C8A96B;
+}
+
+/* Booking */
+
+.booking {
+    min-height: 900px;
+    background-color: #F4EFE6;
+    padding: 80px;
+}
+
+.booking h1 {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+.booking-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 50px;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #D8D0C3;
+    background-color: #F4EFE6;
+    color: #182C27;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: 2px solid #C8A96B;
+    outline-offset: 2px;
+}
+
+.booking-form .button {
+    border: none;
+    cursor: pointer;
+    justify-self: start;
+}
+
+.booking-help {
+    max-width: 1000px;
+    margin: 30px auto 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.booking-help a {
+    color: #182C27;
+    font-weight: bold;
+}
+
+.booking-help a:hover {
+    color: #C8A96B;
+}
+
+/* Contact */
+
+.contact {
+    min-height: 900px;
+    background-color: #F4EFE6;
+    padding: 80px;
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+.contact-container {
+    max-width: 1000px;
+    min-height: 500px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-info h2 {
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: #182C27;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #C8A96B;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 1px solid #D8D0C3;
+    background-color: #F4EFE6;
+    color: #182C27;
+    font-family: inherit;
+    font-size: 15px;
+    resize: vertical;
+}
+
+.contact-form input {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #D8D0C3;
+    background-color: #F4EFE6;
+    color: #182C27;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #C8A96B;
+    outline-offset: 2px;
+}
+
+.contact-form .button {
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* Hitta-sidan */
+
+.location-section {
+    padding: 80px;
+    background-color: #F4EFE6;
+}
+
+.location-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.location-info h2 {
+    color: #182C27;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.location-info p {
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Mobilanpassning */
+
+@media (max-width: 768px) {
+
+    header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #main-navigation.open {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #182C27;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 25px 0;
+    }
+
+
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    .intro {
+        min-height: 200px;
+        padding: 50px 25px;
+    }
+
+    .intro h2 {
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .rooms {
+        padding: 60px 20px;
+    }
+
+    .rooms h2 {
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin-bottom: 35px;
+    }
+
+    .room-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .room-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    footer {
+        min-height: 100px;
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+
+
+/* Booking - mobil */
+
+    .booking {
+        min-height: 930px;
+        padding: 50px 20px;
+    }
+
+    .booking h1 {
+        font-size: 28px;
+        letter-spacing: 3px;
+        margin-bottom: 35px;
+    }
+
+    .booking-form {
+        width: 100%;
+        min-height: 650px;
+        padding: 40px 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .form-group input,
+    .form-group select {
+        height: 50px;
+    }
+
+    .booking-form .button {
+        align-self: flex-start;
+    }
+
+    .booking-help {
+        margin-top: 25px;
+        font-size: 13px;
+    }
+
+/* Contact - mobil */
+
+    .contact {
+        min-height: 930px;
+        padding: 50px 20px;
+    }
+
+    .contact h1 {
+        font-size: 28px;
+        letter-spacing: 3px;
+        margin-bottom: 35px;
+    }
+
+    .contact-container {
+        width: 100%;
+        min-height: 700px;
+        padding: 40px 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-info h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .contact-form {
+        gap: 20px;
+    }
+
+    .contact-form textarea {
+        min-height: 140px;
+    }
+
+    .contact-form .button {
+        align-self: flex-start;
+    }
+
+/* Hitta - mobil */
+
+    .location-section {
+        padding: 50px 20px;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .location-info h2 {
+        font-size: 24px;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+}
